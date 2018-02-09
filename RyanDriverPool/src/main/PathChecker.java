@@ -7,7 +7,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class PathChecker {
-
+	/**
+	 * check if path valid. 
+	 * if not, create file or directory based on path name. 
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		if ((args != null) && (args.length == 1)) {
 			Path path = Paths.get(args[0]);
