@@ -20,7 +20,6 @@ public class PathChecker {
 				System.out.println("path not exist..");
 				String fileName = String.valueOf(path.getFileName());
 				if (fileName.contains(".")) {
-					// create file
 					Path dir = path.getParent();
 					if (Files.exists(dir)) {
 						System.out.println("dir exists. creating " + path.getFileName());
