@@ -2,6 +2,7 @@ package main;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -28,7 +29,11 @@ public class PathChecker {
 					Path dir = path.getParent();
 					if (Files.exists(dir)) {
 						System.out.println("dir exists. creating " + path.getFileName());
-						file.createNewFile();
+						try {
+							file.createNewFile();
+						} catch (AccessDeniedException e) {
+							System.out.println("AccessDeniedException..");
+						}
 					} else {
 						System.out.println("dir not exist. creating " + path);
 						file.getParentFile().mkdirs();
@@ -51,5 +56,7 @@ public class PathChecker {
 	 * Test 4 - existed file - D:\Dropbox\programmer\blog\testFolder - pass
 	 * Test 5 - not existed dir and file - D:\Dropbox\programmer\blog\testFolder\test.txt - pass
 	 */
+	
+	// PathChecker.jar D:\Dropbox\programmer\blog\debug.log
 
 }
