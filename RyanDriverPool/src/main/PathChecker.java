@@ -2,7 +2,6 @@ package main;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -33,7 +32,6 @@ public class PathChecker {
 							file.createNewFile();
 						} catch (Exception e) {
 							System.out.println(e);
-						
 						}
 					} else {
 						System.out.println("dir not exist. creating " + path);

@@ -4,7 +4,7 @@
 - .bat
 - .jar
 
-## PathChecker
+## PathChecker: jar - JUnit
 - check folder path valid, option to create if dont exist. 
 - check file exist, option to create if dont exist. 
 
