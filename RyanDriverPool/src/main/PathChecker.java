@@ -31,8 +31,9 @@ public class PathChecker {
 						System.out.println("dir exists. creating " + path.getFileName());
 						try {
 							file.createNewFile();
-						} catch (AccessDeniedException e) {
-							System.out.println("AccessDeniedException..");
+						} catch (Exception e) {
+							System.out.println(e);
+						
 						}
 					} else {
 						System.out.println("dir not exist. creating " + path);
